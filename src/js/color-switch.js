@@ -16,6 +16,8 @@ const randomIntegerFromInterval = (min, max) => {
 
 let intervalId = null;
 
+refs.btnStop.disabled = true;
+
 function onClickColorSwitchOn() {
   intervalId = setInterval(() => {
     const RANDOM_COLOR =
@@ -25,10 +27,12 @@ function onClickColorSwitchOn() {
   }, 1000);
 
   refs.btnStart.disabled = true;
+  refs.btnStop.disabled = false;
 }
 
 function onClickColorSwitchOff() {
   clearInterval(intervalId);
 
   refs.btnStart.disabled = false;
+  refs.btnStop.disabled = true;
 }

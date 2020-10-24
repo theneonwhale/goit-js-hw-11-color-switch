@@ -52,3 +52,9 @@ body {
 .stop:hover {
   background-color: rgb(247, 19, 133);
 }
+
+.stop:disabled {
+  background-color: rgb(216, 135, 176);
+  color: rgb(241, 241, 241);
+  cursor: auto;
+}
